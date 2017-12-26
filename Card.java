@@ -46,4 +46,20 @@ public class Card {
         return (this.value == other.value) && (this.suit == other.suit);
     }
 
+    public int compareTo( Card other) {
+        int zoop = 1;
+        if( this.value == 0 || other.value == 0) zoop = -1;
+
+        if( this.value < other.value )
+            return (-1 * zoop);
+        else if( this.value > other.value )
+            return (1 * zoop);
+        else if( this.suit < other.suit )
+            return -1;
+        else if( this.suit > other.suit )
+            return 1;
+        else
+            return 0;
+    }
+
 }
