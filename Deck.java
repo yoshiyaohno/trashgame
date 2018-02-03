@@ -1,9 +1,9 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Deck {
 
-    private ArrayList<Card> cards = new ArrayList<Card>();
+    private List<Card> cards = new LinkedList<Card>();
 
     public Deck() {
         this(1);
@@ -26,6 +26,10 @@ public class Deck {
         int rand = (int)( Math.random() * cards.size());
         Card drawn = cards.remove( rand);
         return drawn;
+    }
+
+    public int size() {
+        return cards.size();
     }
 
 }
