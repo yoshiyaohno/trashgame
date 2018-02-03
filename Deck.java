@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Deck {
 
-    private SuperArray cards = new SuperArray();
+    private ArrayList<Card> cards = new ArrayList<Card>();
 
     public Deck() {
         this(1);
@@ -21,7 +24,7 @@ public class Deck {
     public Card draw() {
         if( cards.size() == 0 ) return new Card(-1,-1);
         int rand = (int)( Math.random() * cards.size());
-        Card drawn = (Card)cards.pop( rand);
+        Card drawn = cards.remove( rand);
         return drawn;
     }
 
